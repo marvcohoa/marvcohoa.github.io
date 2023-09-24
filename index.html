@@ -41,6 +41,11 @@
         h2, p {
             font-family: "Poppins", sans-serif;
         }
+        
+        /* Add custom CSS to hide the audio player controls */
+        audio {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -74,15 +79,14 @@
     </div>
     <audio controls autoplay>
         <source src="onthebin.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
     </audio>
 </div>
 
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        const audio = document.querySelector('audio');
-        audio.play();
-    });
-</script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const audio = new Audio('onthebit.mp3');
+            audio.play();
+        });
+    </script>
 </body>
 </html>
